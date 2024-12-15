@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon premier site</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Agdasima:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="LogoSite">
+                <img class="logositelogo" src="logosite.png" alt="LOGO">
+            </div>
+            <div class="MesBoutons">
+                <a href="menu.html"><h1>Menu</h1></a>
+                <a href="Type_Pokemon.html"><h1>Type de Pokemon</h1></a>
+                <a href="mention_legale.html"><h2>Mentions légales</h2></a>
+                <a href="a_propos.html"><h1>À propos</h1></a>
+                <a href="aide.html"><h2>Aide</h2></a>
+                <button onclick="darkmode()" class="darkmode-btn">
+                    <img src="logodarkmode.png" alt="darkmode">
+                </button>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <div class="message-error">
+            <ul></ul>
+        </div>
+        <div class="message-success" style="display: none;">
+            Formulaire envoyé !
+        </div>
+        <form id="user-form">
+            <input type="text" id="username" placeholder="Pseudo (min. 6 caractères)" />
+            <input type="email" id="email" placeholder="Email" />
+            <input type="password" id="password" placeholder="Mot de passe (min. 8 caractères)" />
+            <input type="password" id="confirm-password" placeholder="Confirmer mot de passe" />
+            <div class="form-group">
+                <label>Choisissez un pokèmon :</label>
+                <div>
+                    <input type="radio" id="salamèche" name="qcm" value="Option 1" /> salamèche
+                    <input type="radio" id="carrapuce" name="qcm" value="Option 2" /> carrapuce
+                    <input type="radio" id="bulbizarre" name="qcm" value="Option 2" /> bulbizarre
+                </div>
+            </div>
+            <button type="button" id="validate-btn">Valider</button>
+        </form>
+    </main>
+    <script src="main.js"></script>
+</body>
+</html>
